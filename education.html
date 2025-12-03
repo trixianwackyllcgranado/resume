@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Education - Trixian Wackyll C. Granado">
+  <title>Trixian Granado | Education</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Navigation -->
+  <nav>
+    <div class="nav-container">
+      <a href="index.html" class="nav-logo">TG</a>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="education.html" class="active">Education</a></li>
+        <li><a href="experience.html">Experience</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+    <button class="dark-mode-toggle" onclick="toggleDarkMode()">🌙 Dark Mode</button>
+  </nav>
+
+  <!-- Main Content -->
+  <main>
+    <!-- Header Section -->
+    <section class="hero">
+      <h1>Education & Learning</h1>
+      <p>Building knowledge and skills for a successful IT career</p>
+    </section>
+
+    <div class="container">
+      <!-- Degree Section -->
+      <section>
+        <h2>Academic Degree</h2>
+        <div class="card">
+          <h3>Bachelor of Science in Information Technology</h3>
+          <p class="subtitle">New Era University | 2024 – Present</p>
+          <p>Currently pursuing a comprehensive degree in Information Technology with a focus on practical application of software development, database management, and IT systems.</p>
+          <p><strong>Achievement:</strong> Maintained consistent academic performance while working part-time, demonstrating strong time management and commitment to learning.</p>
+        </div>
+      </section>
+
+      <!-- Relevant Courses -->
+      <section>
+        <h2>Relevant Courses & Subjects</h2>
+        <div class="timeline">
+          <div class="timeline-item">
+            <div class="card">
+              <h3>Core Technical Courses</h3>
+              <ul>
+                <li><strong>Programming:</strong> Object-oriented programming, algorithm design, software fundamentals</li>
+                <li><strong>Database Management:</strong> SQL, relational databases, data modeling</li>
+                <li><strong>Web Development:</strong> HTML, CSS, responsive design, web standards</li>
+                <li><strong>System Analysis:</strong> Requirements gathering, system design, project planning</li>
+              </ul>
+            </div>
+          </div>
+          <div class="timeline-item">
+            <div class="card">
+              <h3>Advanced Topics</h3>
+              <ul>
+                <li><strong>Networking Basics:</strong> Network fundamentals, connectivity, TCP/IP protocols</li>
+                <li><strong>System Security:</strong> Information security, data protection, cybersecurity principles</li>
+                <li><strong>Software Engineering:</strong> SDLC methodologies, testing, documentation, best practices</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Learning Highlights -->
+      <section>
+        <h2>Additional Learning & Highlights</h2>
+        <div class="highlights">
+          <div class="highlight-item">
+            <h4>🌐 Web Projects</h4>
+            <p>Completed personal web development projects using HTML and CSS</p>
+          </div>
+          <div class="highlight-item">
+            <h4>🗄️ Database Management</h4>
+            <p>Hands-on experience with SQL and relational database design</p>
+          </div>
+          <div class="highlight-item">
+            <h4>📚 Online Workshops</h4>
+            <p>Participated in IT workshops to expand knowledge beyond curriculum</p>
+          </div>
+          <div class="highlight-item">
+            <h4>💡 Initiative & Creativity</h4>
+            <p>Demonstrated leadership through personal projects and problem-solving</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Achievements -->
+      <section>
+        <h2>Achievements & Recognitions</h2>
+        <div class="grid-2">
+          <div class="card">
+            <h3>✓ Academic Performance</h3>
+            <p>Maintained consistent grades while working part-time, showing dedication to both education and professional development.</p>
+          </div>
+          <div class="card">
+            <h3>✓ Project Initiatives</h3>
+            <p>Developed personal web development projects that demonstrate practical application of learned concepts.</p>
+          </div>
+          <div class="card">
+            <h3>✓ Practical Skills</h3>
+            <p>Gained hands-on experience with SQL databases and website development beyond classroom requirements.</p>
+          </div>
+          <div class="card">
+            <h3>✓ Continuous Learning</h3>
+            <p>Actively seeking and participating in online IT workshops to expand knowledge and stay current.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Learning Path -->
+      <section>
+        <h2>Learning Focus Areas</h2>
+        <div class="card">
+          <h3>Current & Future Focus</h3>
+          <p>As a student pursuing IT, I am focused on:</p>
+          <ul>
+            <li>Strengthening backend development skills with Java and SQL</li>
+            <li>Mastering responsive web design and modern web standards</li>
+            <li>Understanding system architecture and software design patterns</li>
+            <li>Building security awareness and best practices in coding</li>
+            <li>Developing practical real-world projects for portfolio</li>
+            <li>Contributing to collaborative team environments</li>
+          </ul>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 Trixian Wackyll C. Granado. All rights reserved.</p>
+    <p>Trust the process, and the process will trust you.</p>
+  </footer>
+
+  <!-- Dark Mode Script -->
+  <script>
+    // Load saved dark mode preference
+    const savedMode = localStorage.getItem('darkMode');
+    if (savedMode === 'true') {
+      document.body.classList.add('dark-mode');
+    }
+
+    // Dark mode toggle function
+    function toggleDarkMode() {
+      document.body.classList.toggle('dark-mode');
+      const isDarkMode = document.body.classList.contains('dark-mode');
+      localStorage.setItem('darkMode', isDarkMode);
+      updateToggleButton();
+    }
+
+    // Update button text based on mode
+    function updateToggleButton() {
+      const button = document.querySelector('.dark-mode-toggle');
+      if (document.body.classList.contains('dark-mode')) {
+        button.textContent = '☀️ Light Mode';
+      } else {
+        button.textContent = '🌙 Dark Mode';
+      }
+    }
+
+    // Initialize button on page load
+    updateToggleButton();
+
+    // Set active navigation link
+    document.addEventListener('DOMContentLoaded', function() {
+      const links = document.querySelectorAll('.nav-links a');
+      const currentPage = window.location.pathname.split('/').pop() || 'index.html';
+      links.forEach(link => {
+        const href = link.getAttribute('href');
+        if (href === currentPage) {
+          link.classList.add('active');
+        } else {
+          link.classList.remove('active');
+        }
+      });
+    });
+  </script>
+</body>
+</html>
